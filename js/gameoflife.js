@@ -2,7 +2,17 @@ function seed(...other) {
   return [...other];
 }
 
-function same([x, y], [j, k]) {}
+function same([x, y], [j, k]) {
+  const boolArr = [];
+  for (let i = 0; i < 2; i++){
+    if ([x, y][i] === [j, k][i]){
+      boolArr.push(true);
+    } else {
+      boolArr.push(false);
+    }
+  }
+  return boolArr.includes(false) ? false : true;
+}
 
 // The game state to search for `cell` is passed as the `this` value of the function.
 function contains(cell) {}
